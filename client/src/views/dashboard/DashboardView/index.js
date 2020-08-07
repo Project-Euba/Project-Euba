@@ -18,7 +18,9 @@ let useStyles = makeStyles((theme) => ({
 const DashboardView = () => {
     const classes = useStyles();
     return (
-        <Page className={classes.root}>
+        <Page 
+        className={classes.root}
+        title='dashboard'>
             
         </Page>
     )
