@@ -1,18 +1,19 @@
 {
   "name": "Project-EUBA",
   "version": "1.0.0",
-  "description": "",
+  "description": "A robotics management utility written in ReactJS",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Project-Euba/Project-EUBA.git"
   },
-  "keywords": [],
+  "scripts": {
+    "start": "node server.js",
+	"dev": "nodemon server.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -21,11 +22,6 @@
   "homepage": "https://github.com/Project-Euba/Project-EUBA#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "next": "^9.5.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
-  },
-  "devDependencies": {
     "nodemon": "^2.0.4"
   }
 }
