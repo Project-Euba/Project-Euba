@@ -1,2 +1,2 @@
 ## Project Euba
-    An Non-Profit Utility for Managing FIRST Robotics Teams
+    An Non-Profit Utility for Managing FIRST® Robotics Teams
