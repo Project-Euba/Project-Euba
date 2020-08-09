@@ -17,21 +17,22 @@ const useStyles = makeStyles((theme) => ({
 
 const NotFoundView = () => {
   const classes = useStyles();
-
   return (
   <Box
       display="flex"
       flexDirection="column"
       height="100%"
       justifyContent="center"
+      alignItems='center'
+      className={classes.root}
     >
       <Container maxWidth="md">
         <Typography
           align="center"
-          color="textPrimary"
+          color="textSecondary"
           variant="h1"
         >
-          404: You're Lost!
+          404: Not Found!
         </Typography>
       </Container>
     </Box>
