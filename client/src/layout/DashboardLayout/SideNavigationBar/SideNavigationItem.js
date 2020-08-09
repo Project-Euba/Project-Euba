@@ -36,7 +36,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const SideNavigationItem = ({ className, href, icon: Icon, title, ...rest }) => {
+const SideNavigationItem = ({
+  className,
+  href,
+  icon: Icon,
+  title,
+  ...rest
+}) => {
   const classes = useStyles();
 
   return (
