@@ -10,6 +10,14 @@ const useStyles = makeStyles((theme) => ({
     height: 64,
     backgroundColor: theme.palette.background.paper
   },
+  eubaLogo: {
+    height: 40,
+    width: 72,
+    leftMargin: 30
+  },
+  leftMargin: {
+    // marginLeft: 60
+  }
 }));
 
 const TopToolbar = (className, onMobileNavOpen, ...rest) => {
@@ -17,8 +25,8 @@ const TopToolbar = (className, onMobileNavOpen, ...rest) => {
   return (
     <AppBar className={classes.root} elevation={0}>
       <Toolbar className={classes.toolbar}>
-          <Link to='/app/dashboard'>
-            <EubaLogo />
+          <Link to='/app/dashboard' className={classes.leftMargin}>
+            <EubaLogo className={classes.eubaLogo}/>
           </Link>
       </Toolbar>
     </AppBar>

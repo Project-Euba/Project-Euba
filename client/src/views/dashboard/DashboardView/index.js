@@ -19,9 +19,8 @@ const DashboardView = () => {
     const classes = useStyles();
     return (
         <Page 
-        className={classes.root}
-        title='dashboard'>
-            
+            className={classes.root}
+            title='Dashboard'> 
         </Page>
     )
 }
