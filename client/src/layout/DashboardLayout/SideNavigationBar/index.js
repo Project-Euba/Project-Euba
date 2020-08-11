@@ -55,7 +55,7 @@ const SideNavigationBar = ({ onMobileClose, openMobile }) => {
 
   const content = (
     <Box height="100%" display="flex" flexDirection="column">
-      <Box
+      {/* <Box
         alignItems='center'
         display='flex'
         flexDirection='column'
@@ -71,7 +71,7 @@ const SideNavigationBar = ({ onMobileClose, openMobile }) => {
         </Typography>
         <VersionNumber />
       </Box>
-      <Divider />
+      <Divider /> */}
       <Box p={2}>
         <List>
           {items.map((item) => (

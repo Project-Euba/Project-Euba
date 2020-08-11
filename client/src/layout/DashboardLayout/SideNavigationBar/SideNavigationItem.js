@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink as RouterLink } from "react-router-dom";
 import clsx from "clsx";
 import PropTypes from "prop-types";
-import { Button, ListItem, makeStyles } from "@material-ui/core";
+import { Button, ListItem, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   item: {
@@ -58,7 +58,7 @@ const SideNavigationItem = ({
         to={href}
       >
         {Icon && <Icon className={classes.icon} size="20" />}
-        <span className={classes.title}>{title}</span>
+        <Typography className={classes.title} variant="h6">{title}</Typography>
       </Button>
     </ListItem>
   );
