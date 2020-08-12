@@ -1,19 +1,22 @@
-import "react-perfect-scrollbar/dist/css/styles.css";
-import React, { Component } from "react";
+import React from "react";
 import { ThemeProvider } from "@material-ui/core";
-import { useRoutes } from "react-router-dom";
+import { useRoutes, useNavigate } from "react-router-dom";
+import { gql, useQuery } from "@apollo/client";
 import theme from "./theme";
 import routes from "./routes";
 import GlobalStyles from "./components/GlobalStyles";
+import "react-perfect-scrollbar/dist/css/styles.css";
 import "./App.css";
 
 const App = () => {
   const routing = useRoutes(routes);
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      {routing}
-    </ThemeProvider>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        {routing}
+      </ThemeProvider>
+    </React.Fragment>
   );
 };
 
