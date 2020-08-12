@@ -73,20 +73,26 @@ const LoginView = () => {
     // if not put an error message on the field
     console.log(password());
     console.log(username());
+    let error = false;
     if (!password()) {
+      error = true;
       console.error("No Password!");
       setPasswordError(true);
     }
     if (!username()) {
+      error = true;
       console.error("No Username!");
       setUsernameError(true);
     }
+    // TODO: REPLACE WITH REQUEST TO BACKEND FOR AUTH
     // Sends a request to the server to get a login token
-    token = "placeholdertoken"; // localStorage.removeItem("login_token") to clear
-    // Adds the token to local storage
-    localStorage.setItem("login_token", token);
-    // Brings you to the main dashboard
-    navigate("/app/dashboard");
+    if (!error) {
+      token = "placeholdertoken"; // localStorage.removeItem("login_token") to clear
+      // Adds the token to local storage
+      localStorage.setItem("login_token", token);
+      // Brings you to the main dashboard
+      navigate("/app/dashboard");
+    }
   };
   // Main render function
   return (

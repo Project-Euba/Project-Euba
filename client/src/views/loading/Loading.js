@@ -2,7 +2,8 @@ import React from "react";
 import Page from "../../components/Page";
 import clsx from "clsx";
 import Loader from "react-loader-spinner";
-import { makeStyles, useTheme, Box } from "@material-ui/core";
+import EubaUtils from "../../util/EubaUtils";
+import { makeStyles, useTheme, Box, CircularProgress } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,15 +19,25 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const pickLoader = [
+  "BallTriangle",
+  "Circles",
+  "Grid",
+  "ThreeDots",
+  "MutatingDots"
+]
+
 const Loading = (props) => {
   const classes = useStyles();
   const theme = useTheme();
-  console.log(theme);
+  // Picks a random spinner type
+  let randomIndex = EubaUtils.randomIntFromInterval(0, pickLoader.length - 1); 
+  let pickedLoader = pickLoader[randomIndex];
   return (
     <Page title="Loading" className={classes.root}>
       <Box className={clsx(classes.centerAlign, classes.root)}>
         <Loader
-          type="MutatingDots"
+          type={pickedLoader}
           className={classes.spinner}
           color={theme.palette.primary.main}
           secondaryColor={theme.palette.secondary.main}

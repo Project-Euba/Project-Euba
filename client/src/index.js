@@ -13,7 +13,6 @@ import * as serviceWorker from "./serviceWorker";
 
 // Get the loginToken from localStorage
 const token = localStorage.getItem("token");
-
 // Apollo Client Setup
 const cache = new InMemoryCache({
   typePolicies: typePolicies
@@ -24,7 +23,7 @@ const client = new ApolloClient({
   // link: new HttpLink({
   //   uri: "http://localhost:5000/api",
   //   headers: {
-  //     authorization: localStorage.getItem("token")
+  //     authorization: token
   //   }
   // })
 });
