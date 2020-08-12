@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useQuery, gql } from "@apollo/client";
+import { Outlet, useNavigate } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
 import SideNavigationBar from "./SideNavigationBar";
 import TopToolbar from "./TopToolbar";
+import Loading from "../../views/loading/Loading";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +36,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const DashboardLayout = () => {
+  // Checks if the user is logged in
+  // If they aren't, send them to the login route
   const classes = useStyles();
+  const navigate = useNavigate();
+  const token = localStorage.getItem("login_token");
+  useEffect(() => {
+    // Checks if the token exists
+    if (!token) {
+      navigate("/login");
+    }
+  });
   return (
     <div className={classes.root}>
       <TopToolbar />
