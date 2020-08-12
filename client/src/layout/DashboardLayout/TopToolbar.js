@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import { AppBar, Toolbar, makeStyles } from "@material-ui/core";
 import EubaLogo from '../../components/EubaLogo';
 import { Link } from 'react-router-dom';

@@ -6,6 +6,7 @@ import DashboardView from "./views/dashboard/DashboardView";
 import NotFoundView from "./views/errors/NotFoundView";
 import LoginView from "./views/auth/LoginView";
 import RegisterView from "./views/auth/RegisterView";
+import BallTriangleLoading from "./views/loading/Loading";
 
 const routes = [
   {
@@ -23,6 +24,7 @@ const routes = [
       { path: "login", element: <LoginView /> },
       { path: "register", element: <RegisterView /> },
       { path: "404", element: <NotFoundView /> },
+      { path: "loading", element: <BallTriangleLoading /> },
       { path: "/", element: <Navigate to="/app/dashboard" /> },
       { path: "*", element: <Navigate to="/404" /> },
     ],
