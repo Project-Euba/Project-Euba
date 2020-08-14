@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
   root: {},
   toolbar: {
     height: 64,
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: "0px 0.5px 3px 0px rgba(0,0,0,0.75)"
   },
   eubaLogo: {
     height: 40,

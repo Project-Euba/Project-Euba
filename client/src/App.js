@@ -5,7 +5,7 @@ import { gql, useQuery } from "@apollo/client";
 import theme from "./theme";
 import routes from "./routes";
 import GlobalStyles from "./components/GlobalStyles";
-import "react-perfect-scrollbar/dist/css/styles.css";
+// import "react-perfect-scrollbar/dist/css/styles.css";
 import "./App.css";
 
 const App = () => {

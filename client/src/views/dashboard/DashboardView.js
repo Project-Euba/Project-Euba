@@ -13,7 +13,7 @@ let useStyles = makeStyles((theme) => ({
 
 const DashboardView = () => {
   const classes = useStyles();
-  return <Page className={classes.root} title="Dashboard"></Page>;
+  return (<Page className={classes.root} title="Dashboard"></Page>);
 };
 
 export default DashboardView;

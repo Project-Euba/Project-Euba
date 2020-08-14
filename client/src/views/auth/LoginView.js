@@ -61,25 +61,24 @@ const LoginView = () => {
   useEffect(() => {
     if (token) navigate("/app/dashboard");
   });
-  // Apollo Reactive Vars for Username/Passowrd
-  const username = makeVar("");
-  const password = makeVar("");
-  // React Hook States for reactive errors
+  // React Hook States for password/username
+  const [ username, setUsername ] = useState("");
+  const [ password, setPassword ] = useState("");
   const [ usernameError, setUsernameError ] = useState(false);
   const [ passwordError, setPasswordError ] = useState(false);
   // Submit Button Function
   const onSubmit = () => {
     // Makes sure there is a password or username,
     // if not put an error message on the field
-    console.log(password());
-    console.log(username());
+    console.log(username);
+    console.log(password);
     let error = false;
-    if (!password()) {
+    if (!password) {
       error = true;
       console.error("No Password!");
       setPasswordError(true);
     }
-    if (!username()) {
+    if (!username) {
       error = true;
       console.error("No Username!");
       setUsernameError(true);
@@ -102,7 +101,7 @@ const LoginView = () => {
           maxWidth="md"
           className={clsx(classes.loginBox, classes.centerAlign)}
         >
-          <EubaLogo className={classes.eubaLogo} width="110px" height="60px" />
+          <EubaLogo width="110px" height="60px" />
           <TextField
             error={usernameError}
             label="Username"
@@ -111,7 +110,7 @@ const LoginView = () => {
             className={classes.loginField}
             onChange={(event) => {
               if (usernameError) setUsernameError(false);
-              username(event.target.value);
+              setUsername(event.target.value);
             }}
           />
           <TextField
@@ -123,7 +122,7 @@ const LoginView = () => {
             className={classes.loginField}
             onChange={(event) => {
               if (passwordError) setPasswordError(false);
-              password(event.target.value);
+              setPassword(event.target.value);
             }}
           />
           <Button variant="outlined" className={classes.loginButton} onClick={onSubmit}>

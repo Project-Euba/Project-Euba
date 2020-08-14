@@ -13,7 +13,7 @@ import {
   makeStyles,
   colors,
 } from "@material-ui/core";
-import { BarChart as BarChartIcon } from "react-feather";
+import { BarChart as BarChartIcon, Archive as ArchiveIcon } from "react-feather";
 import SideNavigationItem from "./SideNavigationItem";
 import VersionNumber from "../../../components/VersionNumber";
 
@@ -23,6 +23,11 @@ const items = [
     icon: BarChartIcon,
     title: "Dashboard",
   },
+  {
+    href: "/app/inventory",
+    icon: ArchiveIcon,
+    title: "Inventory"
+  }
 ];
 
 const useStyles = makeStyles((theme) => ({
