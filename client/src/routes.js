@@ -4,6 +4,7 @@ import DashboardLayout from "./layout/DashboardLayout";
 import MainLayout from "./layout/MainLayout";
 import DashboardView from "./views/dashboard/DashboardView";
 import InventoryView from "./views/dashboard/InventoryView";
+import TimelineView from "./views/dashboard/TimelineView";
 import NotFoundView from "./views/errors/NotFoundView";
 import LoginView from "./views/auth/LoginView";
 import RegisterView from "./views/auth/RegisterView";
@@ -16,6 +17,7 @@ const routes = [
     children: [
       { path: "dashboard", element: <DashboardView /> },
       { path: "inventory", element: <InventoryView /> },
+      { path: "timeline", element: <TimelineView /> },
       { path: "*", element: <Navigate to="/404" /> },
     ],
   },

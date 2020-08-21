@@ -12,8 +12,8 @@ const theme = createMuiTheme({
       main: "#478fcc"
     },
     text: {
-      primary: colors.blueGrey[100],
-      secondary: colors.blueGrey[300]
+      primary: colors.grey[100],
+      secondary: colors.grey[300]
     }
   },
   shadows,

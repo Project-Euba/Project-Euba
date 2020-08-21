@@ -2,31 +2,33 @@ import React, { useEffect } from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
-  Avatar,
   Box,
-  Button,
-  Divider,
   Drawer,
   Hidden,
   List,
-  Typography,
   makeStyles,
   colors,
 } from "@material-ui/core";
-import { BarChart as BarChartIcon, Archive as ArchiveIcon } from "react-feather";
+import DashboardOutlined from "@material-ui/icons/DashboardOutlined";
+import AssignmentOutlined from "@material-ui/icons/AssignmentOutlined";
+import TimelineOutlined from "@material-ui/icons/TimelineOutlined";
 import SideNavigationItem from "./SideNavigationItem";
-import VersionNumber from "../../../components/VersionNumber";
 
 const items = [
   {
     href: "/app/dashboard",
-    icon: BarChartIcon,
+    icon: DashboardOutlined,
     title: "Dashboard",
   },
   {
     href: "/app/inventory",
-    icon: ArchiveIcon,
-    title: "Inventory"
+    icon: AssignmentOutlined,
+    title: "Inventory",
+  },
+  {
+    href: "/app/timeline",
+    icon: TimelineOutlined,
+    title: "Timeline"
   }
 ];
 

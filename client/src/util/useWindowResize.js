@@ -24,4 +24,4 @@ function useWindowResize() {
   };
 }
 
-export default useWindowResize
+export default useWindowResize;

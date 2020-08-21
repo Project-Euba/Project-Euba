@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton, Tooltip, Typography } from "@material-ui/core";
-import { HelpCircle } from "react-feather";
+import HelpOutlineOutlined from "@material-ui/icons/HelpOutlineOutlined";
 
 const HelperTooltip = ({ header, body, ...props }) => {
   return (
@@ -16,9 +16,9 @@ const HelperTooltip = ({ header, body, ...props }) => {
       enterDelay={300}
       leaveDelay={50}
     >
-      <IconButton aria-label="help"  {...props}>
-        <HelpCircle />
-      </IconButton>
+      {/* <IconButton aria-label="help" disableRipple={true} disableFocusRipple={true} {...props}> */}
+        <HelpOutlineOutlined {...props}/>
+      {/* </IconButton> */}
     </Tooltip>
   );
 };
