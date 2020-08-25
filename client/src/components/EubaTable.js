@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Typography } from "@material-ui/core";
-import { MTableEditRow, MTableEditField } from "material-table";
+import { MTableEditRow } from "material-table";
 import MaterialTable from "material-table";
 import tableIcons from "../theme/TableIcons";
 
@@ -12,8 +12,8 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(3),
   },
   roboto: {
-    fontFamily: "Roboto"
-  }
+    fontFamily: "Roboto",
+  },
 }));
 
 const EubaTable = ({ style, options, title, ...props }) => {
@@ -43,7 +43,7 @@ const EubaTable = ({ style, options, title, ...props }) => {
               }}
             />
           );
-        }
+        },
       }}
       {...props}
     />
